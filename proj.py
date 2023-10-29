@@ -37,8 +37,8 @@ def print_matr( matr):
         print()
 
 
-def save_matr( matr, fileName, s2):
-    with open( fileName, "a", encoding = "utf8") as myFile:
+def save_matr( matr, fileName, mode, s2):
+    with open( fileName, mode, encoding = "utf8") as myFile:
         print( s2, file=myFile)
         for i in range( len( matr)):
             for j in range( len( matr[i])):
@@ -69,12 +69,12 @@ af = input_matr('3.txt')
 
 print("Исходная матрица")
 print_matr( af)
-save_matr( af, 'outmatr.txt', "source")
+save_matr( af, "w", 'outmatr.txt', "source")
 
 bf = trans( af)
 
 print("результат транспонирования" )
 print_matr( bf)
-save_matr( bf, 'outmatr.txt', "result")
+save_matr( bf, "a" 'outmatr.txt', "result")
 print( "end of program")
                                                                                                                                                                                   
